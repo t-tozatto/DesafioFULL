@@ -1,0 +1,106 @@
+<mat-accordion class="accordion" multi>
+  <mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Informações
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <form class="form" [formGroup]="tituloForm">
+      <mat-form-field class="mat-form" appearance="fill">
+        <mat-label>Número</mat-label>
+        <input matInput #txtNumero formControlName="numero">
+
+        <mat-hint align="end">{{txtNumero.value?.length || 0}}/10</mat-hint>
+        <mat-error *ngIf="tituloForm.controls.numero.dirty && tituloForm.controls.numero.errors?.required">
+          Número do Título obrigatório.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="mat-form" appearance="fill">
+        <mat-label>Nome do Devedor</mat-label>
+        <input matInput #txtNomeDevedor formControlName="devedorNome">
+
+        <mat-hint align="end">{{txtNomeDevedor.value?.length || 0}}/200</mat-hint>
+        <mat-error *ngIf="tituloForm.controls.devedorNome.dirty && tituloForm.controls.devedorNome.errors?.required">
+          Nome do Devedor obrigatório.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="mat-form" appearance="fill">
+        <mat-label>CPF do Devedor</mat-label>
+        <input matInput #txtCpfDevedor formControlName="devedorCpf" [textMask]="{mask: cpfMask}">
+
+        <mat-hint align="end">{{txtCpfDevedor.value?.length || 0}}/14</mat-hint>
+        <mat-error *ngIf="tituloForm.controls.devedorCpf.dirty && tituloForm.controls.devedorCpf.errors?.required">
+          CPF do Devedor obrigatório.
+        </mat-error>
+
+        <mat-error *ngIf="tituloForm.controls.devedorCpf.dirty && tituloForm.controls.devedorCpf.errors?.invalid">
+          CPF do Devedor inválido.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="mat-form" appearance="fill">
+        <mat-label>Porcentagem de Juros</mat-label>
+        <input matInput #txPorcentagemJuros formControlName="porcentagemJuros">
+
+        <mat-hint align="end">{{txPorcentagemJuros.value?.length || 0}}/6</mat-hint>
+        <mat-error
+          *ngIf="tituloForm.controls.porcentagemJuros.dirty && tituloForm.controls.porcentagemJuros.errors?.required">
+          Porcentagem de Juros obrigatório.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="mat-form" appearance="fill">
+        <mat-label>Porcentagem de Multa</mat-label>
+        <input matInput #txtPorcentagemMulta formControlName="porcentagemMulta">
+
+        <mat-hint align="end">{{txtPorcentagemMulta.value?.length || 0}}/6</mat-hint>
+        <mat-error
+          *ngIf="tituloForm.controls.porcentagemJuros.dirty && tituloForm.controls.porcentagemMulta.errors?.required">
+          Porcentagem de Multa obrigatório.</mat-error>
+      </mat-form-field>
+    </form>
+
+    <div class="linha-botao">
+      <button mat-raised-button color="primary" (click)="gravar()">Gravar</button>
+      <button mat-raised-button color="warn" (click)="limpar()">Limpar</button>
+    </div>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Registros Existentes
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <dx-data-grid id="gridContainer" [dataSource]="dataSource" [remoteOperations]="false" [allowColumnReordering]="true"
+      [rowAlternationEnabled]="true" [showBorders]="true">
+
+      <dxo-paging [pageSize]="10"></dxo-paging>
+      <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[10, 25, 50, 100]"></dxo-pager>
+      <dxo-search-panel [visible]="true" [highlightCaseSensitive]="true"></dxo-search-panel>
+      <dxo-group-panel [visible]="true"></dxo-group-panel>
+      <dxo-grouping [autoExpandAll]="true"></dxo-grouping>
+
+      <dxi-column dataField="Numero" dataType="number" caption="Número" alignment="left" [width]="200"></dxi-column>
+      <dxi-column dataField="Devedor" dataType="string" alignment="left" [groupIndex]="0" [width]="150">
+      </dxi-column>
+      <dxi-column dataField="DevedorCPF" dataType="string" caption="CPF" alignment="left" [width]="150"></dxi-column>
+      <dxi-column dataField="PorcentagemMulta" dataType="string" caption="% de Multa" format="percent" alignment="left"
+        [width]="100"></dxi-column>
+      <dxi-column dataField="PorcentagemJuros" dataType="string" caption="% de Juros" format="percent" alignment="left"
+        [width]="100">
+      </dxi-column>
+
+      <dxo-master-detail [enabled]="true" template="data" [autoExpandAll]="false"></dxo-master-detail>
+      <div *dxTemplate="let titulo of 'data'">
+        <div class="master-detail-caption">Parcela(s)</div>
+        <app-master-detail [dataSource]="titulo.data.Parcela" [colunas]="colunaDetalheParcela"></app-master-detail>
+      </div>
+
+    </dx-data-grid>
+
+  </mat-expansion-panel>
+</mat-accordion>

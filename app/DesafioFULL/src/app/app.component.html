@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+	<mat-toolbar-row>
+		<button type="button" aria-label="Abrir Menu" mat-icon-button (click)="sidenav.toggle()">
+			<mat-icon aria-label="Ícone Menu">menu</mat-icon>
+		</button>
+		<span>{{titulo}}</span>
+	</mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container class="container-nav">
+	<mat-sidenav #sidenav mode="side" role="navigation">
+		<mat-nav-list>
+			<mat-list-item routerLink='/cadastro-titulo' routerLinkActive="rota-ativa">
+				<mat-icon>title</mat-icon>
+				Cadastro de Título
+			</mat-list-item>
+		</mat-nav-list>
+	</mat-sidenav>
+
+	<router-outlet></router-outlet>
+</mat-sidenav-container>

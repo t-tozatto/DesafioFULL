@@ -1,0 +1,11 @@
+.container-nav {
+  height: 100%;
+}
+
+mat-icon {
+  margin-right: 20px;
+}
+
+.rota-ativa {
+  background-color: #E8E8E8 !important;
+}
