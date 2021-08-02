@@ -9,7 +9,8 @@
     <form class="form" [formGroup]="tituloForm">
       <mat-form-field class="mat-form" appearance="fill">
         <mat-label>Número</mat-label>
-        <input matInput #txtNumero formControlName="numero">
+        <input matInput #txtNumero currencyMask [options]="{ prefix: '', thousands: '', decimal: '', precision: 0 }"
+          formControlName="numero">
 
         <mat-hint align="end">{{txtNumero.value?.length || 0}}/10</mat-hint>
         <mat-error *ngIf="tituloForm.controls.numero.dirty && tituloForm.controls.numero.errors?.required">
@@ -36,28 +37,29 @@
           CPF do Devedor obrigatório.
         </mat-error>
 
-        <mat-error *ngIf="tituloForm.controls.devedorCpf.dirty && tituloForm.controls.devedorCpf.errors?.invalid">
+        <mat-error *ngIf="tituloForm.controls.devedorCpf.dirty && tituloForm.controls.devedorCpf.errors?.cpfInvalido">
           CPF do Devedor inválido.
         </mat-error>
       </mat-form-field>
 
       <mat-form-field class="mat-form" appearance="fill">
         <mat-label>Porcentagem de Juros</mat-label>
-        <input matInput #txPorcentagemJuros formControlName="porcentagemJuros">
+        <input matInput #txPorcentagemJuros currencyMask formControlName="porcentagemJuros">
 
         <mat-hint align="end">{{txPorcentagemJuros.value?.length || 0}}/6</mat-hint>
         <mat-error
-          *ngIf="tituloForm.controls.porcentagemJuros.dirty && tituloForm.controls.porcentagemJuros.errors?.required">
-          Porcentagem de Juros obrigatório.</mat-error>
+          *ngIf="tituloForm.controls.porcentagemJuros.dirty && (tituloForm.controls.porcentagemJuros.errors?.required || tituloForm.controls.porcentagemJuros.errors?.min)">
+          Porcentagem de Juros obrigatório.
+        </mat-error>
       </mat-form-field>
 
       <mat-form-field class="mat-form" appearance="fill">
         <mat-label>Porcentagem de Multa</mat-label>
-        <input matInput #txtPorcentagemMulta formControlName="porcentagemMulta">
+        <input matInput #txtPorcentagemMulta currencyMask formControlName="porcentagemMulta">
 
         <mat-hint align="end">{{txtPorcentagemMulta.value?.length || 0}}/6</mat-hint>
         <mat-error
-          *ngIf="tituloForm.controls.porcentagemJuros.dirty && tituloForm.controls.porcentagemMulta.errors?.required">
+          *ngIf="tituloForm.controls.porcentagemJuros.dirty && (tituloForm.controls.porcentagemMulta.errors?.required || tituloForm.controls.porcentagemMulta.errors?.min)">
           Porcentagem de Multa obrigatório.</mat-error>
       </mat-form-field>
     </form>

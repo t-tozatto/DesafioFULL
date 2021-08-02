@@ -1,6 +1,5 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { MatSidenav } from '@angular/material/sidenav';
 import { Title } from '@angular/platform-browser';
 import { Titulo } from '../../interface/titulo';
 import { validateCpf } from '../../validators/CpfValidator';
@@ -17,9 +16,9 @@ export class CadastroTituloComponent {
   tituloForm = new FormGroup({
     numero: new FormControl('', [Validators.required, Validators.maxLength(10)]),
     devedorNome: new FormControl('', [Validators.required, Validators.maxLength(200)]),
-    devedorCpf: new FormControl('', [Validators.required, Validators.maxLength(14), validateCpf]),
-    porcentagemJuros: new FormControl('0,00', [Validators.required, Validators.maxLength(6)]),
-    porcentagemMulta: new FormControl('0,00', [Validators.required, Validators.maxLength(6)]),
+    devedorCpf: new FormControl('', [Validators.required, Validators.minLength(14), Validators.maxLength(14), validateCpf()]),
+    porcentagemJuros: new FormControl('0,00', [Validators.required, Validators.min(0.01), Validators.maxLength(6)]),
+    porcentagemMulta: new FormControl('0,00', [Validators.required, Validators.min(0.01), Validators.maxLength(6)]),
   });
 
   cpfMask = [/\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '-', /\d/, /\d/];
@@ -87,7 +86,7 @@ export class CadastroTituloComponent {
   }
 
   gravar(){
-    console.log(this.tituloForm);
+    console.log(this.tituloForm.controls.devedorCpf);
   }
 
   limpar(){

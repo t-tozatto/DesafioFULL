@@ -22,6 +22,17 @@ import { CadastroTituloComponent } from './pages/cadastro-titulo/cadastro-titulo
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { PaginaInexistenteComponent } from './pages/pagina-inexistente/pagina-inexistente.component';
+import { CurrencyMaskConfig, CurrencyMaskModule, CURRENCY_MASK_CONFIG } from "ng2-currency-mask";
+
+export const CustomCurrencyMaskConfig: CurrencyMaskConfig = {
+  align: "left",
+  allowNegative: false,
+  decimal: ",",
+  precision: 2,
+  prefix: "",
+  suffix: "",
+  thousands: "."
+};
 
 @NgModule({
   declarations: [
@@ -49,7 +60,9 @@ import { PaginaInexistenteComponent } from './pages/pagina-inexistente/pagina-in
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
+    CurrencyMaskModule,
   ],
+  providers: [{ provide: CURRENCY_MASK_CONFIG, useValue: CustomCurrencyMaskConfig }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
