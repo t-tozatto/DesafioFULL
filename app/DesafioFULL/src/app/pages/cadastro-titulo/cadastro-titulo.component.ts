@@ -68,10 +68,12 @@ export class CadastroTituloComponent {
 
   async obterTitulos() {
     this.titulosGravados = await this.tituloService.get().toPromise();
+    if (!this.titulosGravados)
+      this.titulosGravados = [];
   }
 
-  gravar() {
-    this.tituloService.post({
+  async gravar() {
+    await this.tituloService.post({
       nomeDevedor: this.tituloForm.controls.devedorNome.value,
       cpfDevedor: this.tituloForm.controls.devedorCpf.value,
       numero: this.tituloForm.controls.numero.value,
@@ -80,10 +82,11 @@ export class CadastroTituloComponent {
       porcentagemMulta: this.tituloForm.controls.porcentagemMulta.value,
     }).toPromise();
 
-    this.obterTitulos();
+    await this.obterTitulos();
 
     this.limpar();
     this.limparParcela();
+    this.limparParcelas();
 
     this.openSnackBar('Título gravado com sucesso!');
   }
@@ -97,17 +100,17 @@ export class CadastroTituloComponent {
   }
 
   adicionarParcela() {
-    if (!this.parcela){
+    if (!this.parcela) {
       this.parcela = [];
       this.parcelaApi = [];
     }
 
     let data;
-    
-    try{
+
+    try {
       data = this.parcelaForm.controls.dataVencimento.value.toDate();
     }
-    catch{
+    catch {
       data = this.parcelaForm.controls.dataVencimento.value;
     }
 
@@ -130,13 +133,17 @@ export class CadastroTituloComponent {
 
   getFormattedPrice(price: number) {
     return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(price);
-}
+  }
 
   limparParcela() {
     this.parcelaForm.reset();
     this.parcelaForm.controls.valor.setValue('0,00');
     this.parcelaForm.controls.dataVencimento.setValue(new Date());
     this.parcelaForm.markAsPristine();
+  }
+
+  limparParcelas() {
+    this.parcela = [];
   }
 
   openSnackBar(message: string) {
