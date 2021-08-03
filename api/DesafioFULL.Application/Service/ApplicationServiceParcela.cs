@@ -50,6 +50,11 @@ namespace DesafioFULL.Application.Service
             _serviceParcela.Remove(_mapperParcela.MapperToEntity(parcela));
         }
 
+        public void RemoveByTitulo(int titulo)
+        {
+            _serviceParcela.RemoveByTitulo(titulo);
+        }
+
         public void Update(ParcelaDTO parcela)
         {
             _serviceParcela.Update(_mapperParcela.MapperToEntity(parcela));

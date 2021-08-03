@@ -4,5 +4,6 @@ namespace DesafioFULL.Domain.Interfaces.Services
 {
     public interface IServiceParcela : IServiceBase<Parcela>
     {
+        void RemoveByTitulo(int titulo);
     }
 }

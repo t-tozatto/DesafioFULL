@@ -67,33 +67,16 @@ namespace DesafioFULL.Presentation.Controllers
             }
         }
 
-        [HttpPut]
-        public ActionResult Put([FromBody] TituloDTO tituloDTO)
+        [HttpDelete("{id}")]
+        public ActionResult Delete(int id)
         {
             try
             {
-                if (tituloDTO == null)
+                if (id == 0)
                     return NotFound();
 
-                _applicationServiceTitulo.Update(tituloDTO);
-                return Ok("Título atualizado com sucesso!");
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
-        [HttpDelete()]
-        public ActionResult Delete([FromBody] TituloDTO tituloDTO)
-        {
-            try
-            {
-                if (tituloDTO == null)
-                    return NotFound();
-
-                _applicationServiceTitulo.Remove(tituloDTO);
+                _applicationServiceParcela.RemoveByTitulo(id);
+                _applicationServiceTitulo.Remove(id);
                 return Ok("Título excluído com sucesso!");
             }
             catch

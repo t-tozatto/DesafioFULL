@@ -13,7 +13,7 @@ namespace DesafioFULL.Application.Interface
 
         void Update(TituloDTO obj);
 
-        void Remove(TituloDTO obj);
+        void Remove(int id);
 
         void Dispose();
     }

@@ -2,6 +2,7 @@
 using DesafioFULL.Application.Interface;
 using DesafioFULL.CrossCuting.Interface;
 using DesafioFULL.Domain.Interfaces.Services;
+using DesafioFULL.Domain.Models;
 using System.Collections.Generic;
 
 namespace DesafioFULL.Application.Service
@@ -40,9 +41,9 @@ namespace DesafioFULL.Application.Service
             return _mapperTitulo.MapperToDTO(_serviceTitulo.GetById(id));
         }
 
-        public void Remove(TituloDTO titulo)
+        public void Remove(int id)
         {
-            _serviceTitulo.Remove(_mapperTitulo.MapperToEntity(titulo));
+            _serviceTitulo.Remove(_serviceTitulo.GetById(id));
         }
 
         public void Update(TituloDTO titulo)

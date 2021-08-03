@@ -16,6 +16,8 @@ namespace DesafioFULL.Application.Interface
         void Update(ParcelaDTO obj);
 
         void Remove(ParcelaDTO obj);
+        
+        void RemoveByTitulo(int titulo);
 
         void Dispose();
     }

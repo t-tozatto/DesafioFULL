@@ -13,5 +13,10 @@ namespace DesafioFULL.Domain.Service
         {
             _repositoryParcela = repositoryParcela;
         }
+
+        public void RemoveByTitulo(int titulo)
+        {
+            _repositoryParcela.RemoveByTitulo(titulo);
+        }
     }
 }
