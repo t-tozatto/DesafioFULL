@@ -18,7 +18,7 @@ export class CadastroTituloComponent {
   titulosGravados: Titulo[] = [];
   parcela: Parcela[] = [];
   parcelaApi: Parcela[] = [];
-  minDate: Date = new Date();
+  minDate: Date = new Date('01/01/1900');
 
   tituloForm = new FormGroup({
     numero: new FormControl('', [Validators.required, Validators.maxLength(10)]),
@@ -85,8 +85,6 @@ export class CadastroTituloComponent {
     await this.obterTitulos();
 
     this.limpar();
-    this.limparParcela();
-    this.limparParcelas();
 
     this.openSnackBar('Título gravado com sucesso!');
   }
@@ -97,6 +95,9 @@ export class CadastroTituloComponent {
     this.tituloForm.controls.porcentagemJuros.setValue('0,00');
     this.tituloForm.controls.porcentagemMulta.setValue('0,00');
     this.tituloForm.markAsPristine();
+
+    this.limparParcela();
+    this.limparParcelas();
   }
 
   adicionarParcela() {
@@ -144,6 +145,7 @@ export class CadastroTituloComponent {
 
   limparParcelas() {
     this.parcela = [];
+    this.parcelaApi = [];
   }
 
   openSnackBar(message: string) {
