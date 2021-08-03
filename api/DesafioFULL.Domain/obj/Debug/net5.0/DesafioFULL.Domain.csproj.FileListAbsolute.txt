@@ -1,0 +1,12 @@
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.Domain\bin\Debug\net5.0\DesafioFULL.Domain.deps.json
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.Domain\bin\Debug\net5.0\DesafioFULL.Domain.dll
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.Domain\bin\Debug\net5.0\ref\DesafioFULL.Domain.dll
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.Domain\bin\Debug\net5.0\DesafioFULL.Domain.pdb
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.Domain\obj\Debug\net5.0\DesafioFULL.Domain.csproj.AssemblyReference.cache
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.Domain\obj\Debug\net5.0\DesafioFULL.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.Domain\obj\Debug\net5.0\DesafioFULL.Domain.AssemblyInfoInputs.cache
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.Domain\obj\Debug\net5.0\DesafioFULL.Domain.AssemblyInfo.cs
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.Domain\obj\Debug\net5.0\DesafioFULL.Domain.csproj.CoreCompileInputs.cache
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.Domain\obj\Debug\net5.0\DesafioFULL.Domain.dll
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.Domain\obj\Debug\net5.0\ref\DesafioFULL.Domain.dll
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.Domain\obj\Debug\net5.0\DesafioFULL.Domain.pdb

@@ -1,0 +1,177 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\thais\\OneDrive\\Documents\\Projetos_Estudo\\Paschoalotto\\DesafioFULL\\api\\CrossCuting\\DesafioFULL.CrossCuting.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\thais\\OneDrive\\Documents\\Projetos_Estudo\\Paschoalotto\\DesafioFULL\\api\\CrossCuting\\DesafioFULL.CrossCuting.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\thais\\OneDrive\\Documents\\Projetos_Estudo\\Paschoalotto\\DesafioFULL\\api\\CrossCuting\\DesafioFULL.CrossCuting.csproj",
+        "projectName": "DesafioFULL.CrossCuting",
+        "projectPath": "C:\\Users\\thais\\OneDrive\\Documents\\Projetos_Estudo\\Paschoalotto\\DesafioFULL\\api\\CrossCuting\\DesafioFULL.CrossCuting.csproj",
+        "packagesPath": "C:\\Users\\thais\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thais\\OneDrive\\Documents\\Projetos_Estudo\\Paschoalotto\\DesafioFULL\\api\\CrossCuting\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\thais\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\thais\\OneDrive\\Documents\\Projetos_Estudo\\Paschoalotto\\DesafioFULL\\api\\DesafioFULL.ApplicationDTO\\DesafioFULL.ApplicationDTO.csproj": {
+                "projectPath": "C:\\Users\\thais\\OneDrive\\Documents\\Projetos_Estudo\\Paschoalotto\\DesafioFULL\\api\\DesafioFULL.ApplicationDTO\\DesafioFULL.ApplicationDTO.csproj"
+              },
+              "C:\\Users\\thais\\OneDrive\\Documents\\Projetos_Estudo\\Paschoalotto\\DesafioFULL\\api\\DesafioFULL.Domain\\DesafioFULL.Domain.csproj": {
+                "projectPath": "C:\\Users\\thais\\OneDrive\\Documents\\Projetos_Estudo\\Paschoalotto\\DesafioFULL\\api\\DesafioFULL.Domain\\DesafioFULL.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\thais\\OneDrive\\Documents\\Projetos_Estudo\\Paschoalotto\\DesafioFULL\\api\\DesafioFULL.ApplicationDTO\\DesafioFULL.ApplicationDTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\thais\\OneDrive\\Documents\\Projetos_Estudo\\Paschoalotto\\DesafioFULL\\api\\DesafioFULL.ApplicationDTO\\DesafioFULL.ApplicationDTO.csproj",
+        "projectName": "DesafioFULL.ApplicationDTO",
+        "projectPath": "C:\\Users\\thais\\OneDrive\\Documents\\Projetos_Estudo\\Paschoalotto\\DesafioFULL\\api\\DesafioFULL.ApplicationDTO\\DesafioFULL.ApplicationDTO.csproj",
+        "packagesPath": "C:\\Users\\thais\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thais\\OneDrive\\Documents\\Projetos_Estudo\\Paschoalotto\\DesafioFULL\\api\\DesafioFULL.ApplicationDTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\thais\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\thais\\OneDrive\\Documents\\Projetos_Estudo\\Paschoalotto\\DesafioFULL\\api\\DesafioFULL.Domain\\DesafioFULL.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\thais\\OneDrive\\Documents\\Projetos_Estudo\\Paschoalotto\\DesafioFULL\\api\\DesafioFULL.Domain\\DesafioFULL.Domain.csproj",
+        "projectName": "DesafioFULL.Domain",
+        "projectPath": "C:\\Users\\thais\\OneDrive\\Documents\\Projetos_Estudo\\Paschoalotto\\DesafioFULL\\api\\DesafioFULL.Domain\\DesafioFULL.Domain.csproj",
+        "packagesPath": "C:\\Users\\thais\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thais\\OneDrive\\Documents\\Projetos_Estudo\\Paschoalotto\\DesafioFULL\\api\\DesafioFULL.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\thais\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

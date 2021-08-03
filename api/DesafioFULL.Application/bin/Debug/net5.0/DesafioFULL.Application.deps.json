@@ -1,0 +1,61 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "DesafioFULL.Application/1.0.0": {
+        "dependencies": {
+          "DesafioFULL.CrossCuting": "1.0.0",
+          "DesafioFULL.Domain": "1.0.0"
+        },
+        "runtime": {
+          "DesafioFULL.Application.dll": {}
+        }
+      },
+      "DesafioFULL.ApplicationDTO/1.0.0": {
+        "runtime": {
+          "DesafioFULL.ApplicationDTO.dll": {}
+        }
+      },
+      "DesafioFULL.CrossCuting/1.0.0": {
+        "dependencies": {
+          "DesafioFULL.ApplicationDTO": "1.0.0",
+          "DesafioFULL.Domain": "1.0.0"
+        },
+        "runtime": {
+          "DesafioFULL.CrossCuting.dll": {}
+        }
+      },
+      "DesafioFULL.Domain/1.0.0": {
+        "runtime": {
+          "DesafioFULL.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DesafioFULL.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DesafioFULL.ApplicationDTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DesafioFULL.CrossCuting/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DesafioFULL.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

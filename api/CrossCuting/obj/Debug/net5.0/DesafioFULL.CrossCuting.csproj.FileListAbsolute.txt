@@ -1,0 +1,17 @@
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\CrossCuting\bin\Debug\net5.0\DesafioFULL.CrossCuting.deps.json
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\CrossCuting\bin\Debug\net5.0\DesafioFULL.CrossCuting.dll
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\CrossCuting\bin\Debug\net5.0\ref\DesafioFULL.CrossCuting.dll
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\CrossCuting\bin\Debug\net5.0\DesafioFULL.CrossCuting.pdb
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\CrossCuting\bin\Debug\net5.0\DesafioFULL.ApplicationDTO.dll
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\CrossCuting\bin\Debug\net5.0\DesafioFULL.Domain.dll
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\CrossCuting\bin\Debug\net5.0\DesafioFULL.ApplicationDTO.pdb
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\CrossCuting\bin\Debug\net5.0\DesafioFULL.Domain.pdb
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\CrossCuting\obj\Debug\net5.0\DesafioFULL.CrossCuting.csproj.AssemblyReference.cache
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\CrossCuting\obj\Debug\net5.0\DesafioFULL.CrossCuting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\CrossCuting\obj\Debug\net5.0\DesafioFULL.CrossCuting.AssemblyInfoInputs.cache
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\CrossCuting\obj\Debug\net5.0\DesafioFULL.CrossCuting.AssemblyInfo.cs
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\CrossCuting\obj\Debug\net5.0\DesafioFULL.CrossCuting.csproj.CoreCompileInputs.cache
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\CrossCuting\obj\Debug\net5.0\DesafioFULL.CrossCuting.csproj.CopyComplete
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\CrossCuting\obj\Debug\net5.0\DesafioFULL.CrossCuting.dll
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\CrossCuting\obj\Debug\net5.0\ref\DesafioFULL.CrossCuting.dll
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\CrossCuting\obj\Debug\net5.0\DesafioFULL.CrossCuting.pdb

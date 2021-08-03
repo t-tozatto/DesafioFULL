@@ -1,0 +1,12 @@
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.ApplicationDTO\bin\Debug\net5.0\DesafioFULL.ApplicationDTO.deps.json
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.ApplicationDTO\bin\Debug\net5.0\DesafioFULL.ApplicationDTO.dll
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.ApplicationDTO\bin\Debug\net5.0\ref\DesafioFULL.ApplicationDTO.dll
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.ApplicationDTO\bin\Debug\net5.0\DesafioFULL.ApplicationDTO.pdb
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.ApplicationDTO\obj\Debug\net5.0\DesafioFULL.ApplicationDTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.ApplicationDTO\obj\Debug\net5.0\DesafioFULL.ApplicationDTO.AssemblyInfoInputs.cache
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.ApplicationDTO\obj\Debug\net5.0\DesafioFULL.ApplicationDTO.AssemblyInfo.cs
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.ApplicationDTO\obj\Debug\net5.0\DesafioFULL.ApplicationDTO.csproj.CoreCompileInputs.cache
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.ApplicationDTO\obj\Debug\net5.0\DesafioFULL.ApplicationDTO.dll
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.ApplicationDTO\obj\Debug\net5.0\ref\DesafioFULL.ApplicationDTO.dll
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.ApplicationDTO\obj\Debug\net5.0\DesafioFULL.ApplicationDTO.pdb
+C:\Users\thais\OneDrive\Documents\Projetos_Estudo\Paschoalotto\DesafioFULL\api\DesafioFULL.ApplicationDTO\obj\Debug\net5.0\DesafioFULL.ApplicationDTO.csproj.AssemblyReference.cache
