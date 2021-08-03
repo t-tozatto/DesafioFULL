@@ -6,67 +6,129 @@
       </mat-panel-title>
     </mat-expansion-panel-header>
 
-    <form class="form" [formGroup]="tituloForm">
-      <mat-form-field class="mat-form" appearance="fill">
-        <mat-label>Número</mat-label>
-        <input matInput #txtNumero currencyMask [options]="{ prefix: '', thousands: '', decimal: '', precision: 0 }"
-          formControlName="numero">
+    <div class="informacoes">
+      <form class="form" [formGroup]="tituloForm">
+        <div class="parcela">
+          <span>Título</span>
+        </div>
 
-        <mat-hint align="end">{{txtNumero.value?.length || 0}}/10</mat-hint>
-        <mat-error *ngIf="tituloForm.controls.numero.dirty && tituloForm.controls.numero.errors?.required">
-          Número do Título obrigatório.
-        </mat-error>
-      </mat-form-field>
+        <mat-form-field class="mat-form" appearance="fill">
+          <mat-label>Número</mat-label>
+          <input matInput #txtNumero currencyMask [options]="{ prefix: '', thousands: '', decimal: '', precision: 0 }"
+            formControlName="numero">
 
-      <mat-form-field class="mat-form" appearance="fill">
-        <mat-label>Nome do Devedor</mat-label>
-        <input matInput #txtNomeDevedor formControlName="devedorNome">
+          <mat-hint align="end">{{txtNumero.value?.length || 0}}/10</mat-hint>
+          <mat-error *ngIf="tituloForm.controls.numero.dirty && tituloForm.controls.numero.errors?.required">
+            Número do Título obrigatório.
+          </mat-error>
+        </mat-form-field>
 
-        <mat-hint align="end">{{txtNomeDevedor.value?.length || 0}}/200</mat-hint>
-        <mat-error *ngIf="tituloForm.controls.devedorNome.dirty && tituloForm.controls.devedorNome.errors?.required">
-          Nome do Devedor obrigatório.
-        </mat-error>
-      </mat-form-field>
+        <mat-form-field class="mat-form" appearance="fill">
+          <mat-label>Nome do Devedor</mat-label>
+          <input matInput #txtNomeDevedor formControlName="devedorNome">
 
-      <mat-form-field class="mat-form" appearance="fill">
-        <mat-label>CPF do Devedor</mat-label>
-        <input matInput #txtCpfDevedor formControlName="devedorCpf" [textMask]="{mask: cpfMask}">
+          <mat-hint align="end">{{txtNomeDevedor.value?.length || 0}}/200</mat-hint>
+          <mat-error *ngIf="tituloForm.controls.devedorNome.dirty && tituloForm.controls.devedorNome.errors?.required">
+            Nome do Devedor obrigatório.
+          </mat-error>
+        </mat-form-field>
 
-        <mat-hint align="end">{{txtCpfDevedor.value?.length || 0}}/14</mat-hint>
-        <mat-error *ngIf="tituloForm.controls.devedorCpf.dirty && tituloForm.controls.devedorCpf.errors?.required">
-          CPF do Devedor obrigatório.
-        </mat-error>
+        <mat-form-field class="mat-form" appearance="fill">
+          <mat-label>CPF do Devedor</mat-label>
+          <input matInput #txtCpfDevedor formControlName="devedorCpf" [textMask]="{mask: cpfMask}">
 
-        <mat-error *ngIf="tituloForm.controls.devedorCpf.dirty && tituloForm.controls.devedorCpf.errors?.cpfInvalido">
-          CPF do Devedor inválido.
-        </mat-error>
-      </mat-form-field>
+          <mat-hint align="end">{{txtCpfDevedor.value?.length || 0}}/14</mat-hint>
+          <mat-error *ngIf="tituloForm.controls.devedorCpf.dirty && tituloForm.controls.devedorCpf.errors?.required">
+            CPF do Devedor obrigatório.
+          </mat-error>
 
-      <mat-form-field class="mat-form" appearance="fill">
-        <mat-label>Porcentagem de Juros</mat-label>
-        <input matInput #txPorcentagemJuros currencyMask formControlName="porcentagemJuros">
+          <mat-error *ngIf="tituloForm.controls.devedorCpf.dirty && tituloForm.controls.devedorCpf.errors?.cpfInvalido">
+            CPF do Devedor inválido.
+          </mat-error>
+        </mat-form-field>
 
-        <mat-hint align="end">{{txPorcentagemJuros.value?.length || 0}}/6</mat-hint>
-        <mat-error
-          *ngIf="tituloForm.controls.porcentagemJuros.dirty && (tituloForm.controls.porcentagemJuros.errors?.required || tituloForm.controls.porcentagemJuros.errors?.min)">
-          Porcentagem de Juros obrigatório.
-        </mat-error>
-      </mat-form-field>
+        <mat-form-field class="mat-form" appearance="fill">
+          <mat-label>Porcentagem de Juros</mat-label>
+          <input matInput #txtPorcentagemJuros currencyMask formControlName="porcentagemJuros">
 
-      <mat-form-field class="mat-form" appearance="fill">
-        <mat-label>Porcentagem de Multa</mat-label>
-        <input matInput #txtPorcentagemMulta currencyMask formControlName="porcentagemMulta">
+          <mat-hint align="end">{{txtPorcentagemJuros.value?.length || 0}}/6</mat-hint>
+          <mat-error
+            *ngIf="tituloForm.controls.porcentagemJuros.dirty && (tituloForm.controls.porcentagemJuros.errors?.required || tituloForm.controls.porcentagemJuros.errors?.min)">
+            Porcentagem de Juros obrigatório.
+          </mat-error>
+        </mat-form-field>
 
-        <mat-hint align="end">{{txtPorcentagemMulta.value?.length || 0}}/6</mat-hint>
-        <mat-error
-          *ngIf="tituloForm.controls.porcentagemJuros.dirty && (tituloForm.controls.porcentagemMulta.errors?.required || tituloForm.controls.porcentagemMulta.errors?.min)">
-          Porcentagem de Multa obrigatório.</mat-error>
-      </mat-form-field>
-    </form>
+        <mat-form-field class="mat-form" appearance="fill">
+          <mat-label>Porcentagem de Multa</mat-label>
+          <input matInput #txtPorcentagemMulta currencyMask formControlName="porcentagemMulta">
+
+          <mat-hint align="end">{{txtPorcentagemMulta.value?.length || 0}}/6</mat-hint>
+          <mat-error
+            *ngIf="tituloForm.controls.porcentagemJuros.dirty && (tituloForm.controls.porcentagemMulta.errors?.required || tituloForm.controls.porcentagemMulta.errors?.min)">
+            Porcentagem de Multa obrigatório.</mat-error>
+        </mat-form-field>
+      </form>
+
+      <form class="form" [formGroup]="parcelaForm">
+        <div class="parcela">
+          <span>Parcelas</span>
+        </div>
+
+        <mat-form-field class="mat-form" appearance="fill">
+          <mat-label>Número</mat-label>
+          <input matInput #txtNumeroParcela currencyMask
+            [options]="{ prefix: '', thousands: '', decimal: '', precision: 0 }" formControlName="numero">
+
+          <mat-hint align="end">{{txtNumeroParcela.value?.length || 0}}/10</mat-hint>
+          <mat-error *ngIf="parcelaForm.controls.numero.dirty && parcelaForm.controls.numero.errors?.required">
+            Número da Parcela obrigatório.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="mat-form" appearance="fill">
+          <mat-label>Data de Vencimento</mat-label>
+          <input matInput #txtDataVencimento [matDatepicker]="picker" formControlName="dataVencimento" [min]="minDate">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker color="primary" #picker></mat-datepicker>
+
+          <mat-error
+            *ngIf="parcelaForm.controls.dataVencimento.dirty && parcelaForm.controls.dataVencimento.errors?.required">
+            Data de Vencimento obrigatória.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="mat-form" appearance="fill">
+          <mat-label>Valor</mat-label>
+          <input matInput #txtValor currencyMask formControlName="valor">
+
+          <mat-hint align="end">{{txtValor.value?.length || 0}}/6</mat-hint>
+          <mat-error
+            *ngIf="parcelaForm.controls.valor.dirty && (parcelaForm.controls.valor.errors?.required || parcelaForm.controls.valor.errors?.min)">
+            Valor obrigatório.
+          </mat-error>
+        </mat-form-field>
+
+        <div class="linha-botao">
+          <button mat-raised-button color="primary" (click)="adicionarParcela()"
+            *ngIf="parcelaForm.valid">Adicionar</button>
+          <button mat-raised-button (click)="limparParcela()">Limpar</button>
+        </div>
+
+        <dx-data-grid id="grdParcela" [dataSource]="parcela" [remoteOperations]="false" [allowColumnReordering]="true"
+          [rowAlternationEnabled]="true" [showBorders]="true">
+
+          <dxi-column dataField="numero" dataType="number" caption="Número" alignment="left" [width]="150"></dxi-column>
+          <dxi-column dataField="dataVencimento" dataType="string" alignment="left" [width]="150">
+          </dxi-column>
+          <dxi-column dataField="valor" dataType="string" caption="Valor" alignment="left" [width]="200"></dxi-column>
+        </dx-data-grid>
+      </form>
+    </div>
 
     <div class="linha-botao">
-      <button mat-raised-button color="primary" (click)="gravar()">Gravar</button>
-      <button mat-raised-button color="warn" (click)="limpar()">Limpar</button>
+      <button mat-raised-button color="primary" (click)="gravar()"
+        *ngIf="tituloForm.valid && parcela.length > 0">Gravar</button>
+      <button mat-raised-button (click)="limpar()">Limpar</button>
     </div>
   </mat-expansion-panel>
 
@@ -77,8 +139,8 @@
       </mat-panel-title>
     </mat-expansion-panel-header>
 
-    <dx-data-grid id="gridContainer" [dataSource]="dataSource" [remoteOperations]="false" [allowColumnReordering]="true"
-      [rowAlternationEnabled]="true" [showBorders]="true">
+    <dx-data-grid id="grdTitulos" [dataSource]="titulosGravados" [remoteOperations]="false"
+      [allowColumnReordering]="true" [rowAlternationEnabled]="true" [showBorders]="true">
 
       <dxo-paging [pageSize]="10"></dxo-paging>
       <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[10, 25, 50, 100]"></dxo-pager>
@@ -86,20 +148,20 @@
       <dxo-group-panel [visible]="true"></dxo-group-panel>
       <dxo-grouping [autoExpandAll]="true"></dxo-grouping>
 
-      <dxi-column dataField="Numero" dataType="number" caption="Número" alignment="left" [width]="200"></dxi-column>
-      <dxi-column dataField="Devedor" dataType="string" alignment="left" [groupIndex]="0" [width]="150">
+      <dxi-column dataField="numero" dataType="number" caption="Número" alignment="left" [width]="200"></dxi-column>
+      <dxi-column dataField="nomeDevedor" dataType="string" alignment="left" [groupIndex]="0" [width]="150">
       </dxi-column>
-      <dxi-column dataField="DevedorCPF" dataType="string" caption="CPF" alignment="left" [width]="150"></dxi-column>
-      <dxi-column dataField="PorcentagemMulta" dataType="string" caption="% de Multa" format="percent" alignment="left"
+      <dxi-column dataField="cpfDevedor" dataType="string" caption="CPF" alignment="left" [width]="150"></dxi-column>
+      <dxi-column dataField="porcentagemMulta" dataType="string" caption="% de Multa" format="percent" alignment="left"
         [width]="100"></dxi-column>
-      <dxi-column dataField="PorcentagemJuros" dataType="string" caption="% de Juros" format="percent" alignment="left"
+      <dxi-column dataField="porcentagemJuros" dataType="string" caption="% de Juros" format="percent" alignment="left"
         [width]="100">
       </dxi-column>
 
       <dxo-master-detail [enabled]="true" template="data" [autoExpandAll]="false"></dxo-master-detail>
       <div *dxTemplate="let titulo of 'data'">
         <div class="master-detail-caption">Parcela(s)</div>
-        <app-master-detail [dataSource]="titulo.data.Parcela" [colunas]="colunaDetalheParcela"></app-master-detail>
+        <app-master-detail [dataSource]="titulo.data.parcela" [colunas]="colunaDetalheParcela"></app-master-detail>
       </div>
 
     </dx-data-grid>

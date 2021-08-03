@@ -1,5 +1,5 @@
 export interface Parcela {
-  Numero: number,
-  DataVencimento: string,
-  Valor: string
+  numero: number,
+  dataVencimento: string,
+  valor: string
 }

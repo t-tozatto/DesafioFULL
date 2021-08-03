@@ -27,6 +27,15 @@ namespace DesafioFULL
         {
 
             services.AddControllers();
+
+            services.AddCors(opt => opt.AddPolicy("CorsPolicy", c =>
+            {
+                c.WithOrigins("http://localhost:4200")
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials();
+            }));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DesafioFULL", Version = "v1" });
@@ -57,6 +66,8 @@ namespace DesafioFULL
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
 

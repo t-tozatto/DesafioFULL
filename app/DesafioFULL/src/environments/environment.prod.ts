@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  urlAPi: 'https://localhost:44325/'
 };

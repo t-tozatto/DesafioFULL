@@ -59,7 +59,7 @@ namespace DesafioFULL.Presentation.Controllers
                         _applicationServiceParcela.Add(p);
                 }
 
-                return Ok("Título cadastrado com sucesso!");
+                return Ok();
             }
             catch
             {
@@ -77,7 +77,7 @@ namespace DesafioFULL.Presentation.Controllers
 
                 _applicationServiceParcela.RemoveByTitulo(id);
                 _applicationServiceTitulo.Remove(id);
-                return Ok("Título excluído com sucesso!");
+                return Ok();
             }
             catch
             {
