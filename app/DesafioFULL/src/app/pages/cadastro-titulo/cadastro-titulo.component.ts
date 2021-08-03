@@ -68,7 +68,6 @@ export class CadastroTituloComponent {
 
   async obterTitulos() {
     this.titulosGravados = await this.tituloService.get().toPromise();
-    console.log(this.titulosGravados);
   }
 
   gravar() {
@@ -81,10 +80,12 @@ export class CadastroTituloComponent {
       porcentagemMulta: this.tituloForm.controls.porcentagemMulta.value,
     }).toPromise();
 
+    this.obterTitulos();
+
     this.limpar();
     this.limparParcela();
 
-    this.openSnackBar('Título gravado com sucesso!')
+    this.openSnackBar('Título gravado com sucesso!');
   }
 
   limpar() {
