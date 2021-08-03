@@ -157,6 +157,11 @@
       <dxi-column dataField="porcentagemJuros" dataType="string" caption="% de Juros" format="percent" alignment="left"
         [width]="100">
       </dxi-column>
+      <dxi-column dataField="valorTotal" dataType="string" caption="Valor Total" alignment="left" [width]="200"></dxi-column>
+      <dxi-column dataField="valorAtualizado" dataType="string" caption="Valor Atualizado" alignment="left" [width]="200"></dxi-column>
+      <dxi-column dataField="diasAtraso" dataType="string" caption="Dias de Atraso" alignment="left"
+        [width]="150">
+      </dxi-column>
 
       <dxo-master-detail [enabled]="true" template="data" [autoExpandAll]="false"></dxo-master-detail>
       <div *dxTemplate="let titulo of 'data'">

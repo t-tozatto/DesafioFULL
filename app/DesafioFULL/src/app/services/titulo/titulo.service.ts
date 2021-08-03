@@ -9,7 +9,7 @@ import { environment } from './../../../environments/environment';
   providedIn: 'root'
 })
 export class TituloService {
-  readonly urlTitulo = environment.urlAPi + 'Titulo';
+  readonly urlTitulo = environment.urlAPI + 'Titulo';
 
   constructor(private http: HttpClient) { }
 

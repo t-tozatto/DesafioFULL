@@ -1,5 +1,6 @@
 ﻿using DesafioFULL.Application.DTO;
 using DesafioFULL.Application.Interface;
+using DesafioFULL.ApplicationDTO.DTO;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -29,7 +30,7 @@ namespace DesafioFULL.Presentation.Controllers
             for(int i = 0; i < titulos.Count(); i++)
                 titulos[i].Parcela = _applicationServiceParcela.GetByProperty("Titulo", titulos[i].Id).ToList();
 
-            return Ok(titulos);
+            return Ok(titulos.Select(x => new TituloFrontDTO(x)));
         }
 
         [HttpGet("{id}")]
@@ -38,7 +39,7 @@ namespace DesafioFULL.Presentation.Controllers
             TituloDTO titulo = _applicationServiceTitulo.GetById(id);
             titulo.Parcela = _applicationServiceParcela.GetByProperty("Titulo", titulo.Id).ToList();
 
-            return Ok(titulo);
+            return Ok(new TituloFrontDTO(titulo));
         }
 
         [HttpPost]
